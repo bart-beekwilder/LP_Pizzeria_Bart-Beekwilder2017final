@@ -50,8 +50,14 @@
             this.btnNewOrder = new System.Windows.Forms.Button();
             this.pnlAddPizza = new System.Windows.Forms.Panel();
             this.gbCustomPizza = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblAddedIngredients = new System.Windows.Forms.Label();
+            this.cbCrusts = new System.Windows.Forms.ComboBox();
+            this.cbIngredientsOrder = new System.Windows.Forms.ComboBox();
             this.btnAddIngredientPizza = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbPizzaIngredients = new System.Windows.Forms.ListBox();
             this.gbShape = new System.Windows.Forms.GroupBox();
             this.rbTriangle = new System.Windows.Forms.RadioButton();
             this.rbRectangle = new System.Windows.Forms.RadioButton();
@@ -59,17 +65,18 @@
             this.nudCOrder = new System.Windows.Forms.NumericUpDown();
             this.nudBOrder = new System.Windows.Forms.NumericUpDown();
             this.nudAOrder = new System.Windows.Forms.NumericUpDown();
-            this.lbPizzaIngredients = new System.Windows.Forms.ListBox();
             this.btnAddCustomPizza = new System.Windows.Forms.Button();
             this.gbStandardPizza = new System.Windows.Forms.GroupBox();
             this.lbStandardPizzas = new System.Windows.Forms.ListBox();
             this.btnAddStandardPizza = new System.Windows.Forms.Button();
             this.lblAddPizza = new System.Windows.Forms.Label();
-            this.cbIngredientsOrder = new System.Windows.Forms.ComboBox();
-            this.cbCrusts = new System.Windows.Forms.ComboBox();
-            this.lblAddedIngredients = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnRevenueProfit = new System.Windows.Forms.Button();
+            this.pnlProfitRevenue = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblProfit = new System.Windows.Forms.Label();
+            this.lblRevenue = new System.Windows.Forms.Label();
             this.pnlAddCustomer.SuspendLayout();
             this.pnlNewOrder.SuspendLayout();
             this.pnlAddPizza.SuspendLayout();
@@ -79,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudBOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAOrder)).BeginInit();
             this.gbStandardPizza.SuspendLayout();
+            this.pnlProfitRevenue.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddCustomer
@@ -93,7 +101,7 @@
             // 
             // btnMenuNewOrder
             // 
-            this.btnMenuNewOrder.Location = new System.Drawing.Point(12, 124);
+            this.btnMenuNewOrder.Location = new System.Drawing.Point(12, 148);
             this.btnMenuNewOrder.Name = "btnMenuNewOrder";
             this.btnMenuNewOrder.Size = new System.Drawing.Size(129, 42);
             this.btnMenuNewOrder.TabIndex = 1;
@@ -103,7 +111,7 @@
             // 
             // btnMenuAddPizza
             // 
-            this.btnMenuAddPizza.Location = new System.Drawing.Point(12, 172);
+            this.btnMenuAddPizza.Location = new System.Drawing.Point(12, 196);
             this.btnMenuAddPizza.Name = "btnMenuAddPizza";
             this.btnMenuAddPizza.Size = new System.Drawing.Size(129, 42);
             this.btnMenuAddPizza.TabIndex = 2;
@@ -113,7 +121,7 @@
             // 
             // btnExportOrder
             // 
-            this.btnExportOrder.Location = new System.Drawing.Point(12, 220);
+            this.btnExportOrder.Location = new System.Drawing.Point(12, 244);
             this.btnExportOrder.Name = "btnExportOrder";
             this.btnExportOrder.Size = new System.Drawing.Size(129, 42);
             this.btnExportOrder.TabIndex = 3;
@@ -124,7 +132,7 @@
             // lblMenuOrder
             // 
             this.lblMenuOrder.AutoSize = true;
-            this.lblMenuOrder.Location = new System.Drawing.Point(51, 108);
+            this.lblMenuOrder.Location = new System.Drawing.Point(51, 132);
             this.lblMenuOrder.Name = "lblMenuOrder";
             this.lblMenuOrder.Size = new System.Drawing.Size(52, 13);
             this.lblMenuOrder.TabIndex = 6;
@@ -302,6 +310,49 @@
             this.gbCustomPizza.TabStop = false;
             this.gbCustomPizza.Text = "Custom pizza";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 138);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Bodem";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 234);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Ingrediënten";
+            // 
+            // lblAddedIngredients
+            // 
+            this.lblAddedIngredients.AutoSize = true;
+            this.lblAddedIngredients.Location = new System.Drawing.Point(16, 310);
+            this.lblAddedIngredients.Name = "lblAddedIngredients";
+            this.lblAddedIngredients.Size = new System.Drawing.Size(135, 13);
+            this.lblAddedIngredients.TabIndex = 11;
+            this.lblAddedIngredients.Text = "Toegevoegde ingrediënten";
+            // 
+            // cbCrusts
+            // 
+            this.cbCrusts.FormattingEnabled = true;
+            this.cbCrusts.Location = new System.Drawing.Point(16, 157);
+            this.cbCrusts.Name = "cbCrusts";
+            this.cbCrusts.Size = new System.Drawing.Size(162, 21);
+            this.cbCrusts.TabIndex = 10;
+            // 
+            // cbIngredientsOrder
+            // 
+            this.cbIngredientsOrder.FormattingEnabled = true;
+            this.cbIngredientsOrder.Location = new System.Drawing.Point(17, 253);
+            this.cbIngredientsOrder.Name = "cbIngredientsOrder";
+            this.cbIngredientsOrder.Size = new System.Drawing.Size(162, 21);
+            this.cbIngredientsOrder.TabIndex = 9;
+            // 
             // btnAddIngredientPizza
             // 
             this.btnAddIngredientPizza.Location = new System.Drawing.Point(19, 280);
@@ -320,6 +371,14 @@
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Afmetingen";
+            // 
+            // lbPizzaIngredients
+            // 
+            this.lbPizzaIngredients.FormattingEnabled = true;
+            this.lbPizzaIngredients.Location = new System.Drawing.Point(16, 329);
+            this.lbPizzaIngredients.Name = "lbPizzaIngredients";
+            this.lbPizzaIngredients.Size = new System.Drawing.Size(165, 95);
+            this.lbPizzaIngredients.TabIndex = 2;
             // 
             // gbShape
             // 
@@ -368,6 +427,11 @@
             // nudCOrder
             // 
             this.nudCOrder.Location = new System.Drawing.Point(136, 200);
+            this.nudCOrder.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nudCOrder.Minimum = new decimal(new int[] {
             1,
             0,
@@ -385,6 +449,11 @@
             // nudBOrder
             // 
             this.nudBOrder.Location = new System.Drawing.Point(78, 200);
+            this.nudBOrder.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nudBOrder.Minimum = new decimal(new int[] {
             1,
             0,
@@ -402,6 +471,11 @@
             // nudAOrder
             // 
             this.nudAOrder.Location = new System.Drawing.Point(20, 200);
+            this.nudAOrder.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nudAOrder.Minimum = new decimal(new int[] {
             1,
             0,
@@ -415,14 +489,6 @@
             0,
             0,
             0});
-            // 
-            // lbPizzaIngredients
-            // 
-            this.lbPizzaIngredients.FormattingEnabled = true;
-            this.lbPizzaIngredients.Location = new System.Drawing.Point(16, 329);
-            this.lbPizzaIngredients.Name = "lbPizzaIngredients";
-            this.lbPizzaIngredients.Size = new System.Drawing.Size(165, 95);
-            this.lbPizzaIngredients.TabIndex = 2;
             // 
             // btnAddCustomPizza
             // 
@@ -473,48 +539,77 @@
             this.lblAddPizza.TabIndex = 9;
             this.lblAddPizza.Text = "Pizza maken";
             // 
-            // cbIngredientsOrder
+            // btnRevenueProfit
             // 
-            this.cbIngredientsOrder.FormattingEnabled = true;
-            this.cbIngredientsOrder.Location = new System.Drawing.Point(17, 253);
-            this.cbIngredientsOrder.Name = "cbIngredientsOrder";
-            this.cbIngredientsOrder.Size = new System.Drawing.Size(162, 21);
-            this.cbIngredientsOrder.TabIndex = 9;
+            this.btnRevenueProfit.Location = new System.Drawing.Point(12, 60);
+            this.btnRevenueProfit.Name = "btnRevenueProfit";
+            this.btnRevenueProfit.Size = new System.Drawing.Size(129, 42);
+            this.btnRevenueProfit.TabIndex = 11;
+            this.btnRevenueProfit.Text = "Winst/Omzet";
+            this.btnRevenueProfit.UseVisualStyleBackColor = true;
+            this.btnRevenueProfit.Click += new System.EventHandler(this.btnRevenueProfit_Click);
             // 
-            // cbCrusts
+            // pnlProfitRevenue
             // 
-            this.cbCrusts.FormattingEnabled = true;
-            this.cbCrusts.Location = new System.Drawing.Point(16, 157);
-            this.cbCrusts.Name = "cbCrusts";
-            this.cbCrusts.Size = new System.Drawing.Size(162, 21);
-            this.cbCrusts.TabIndex = 10;
+            this.pnlProfitRevenue.Controls.Add(this.lblRevenue);
+            this.pnlProfitRevenue.Controls.Add(this.lblProfit);
+            this.pnlProfitRevenue.Controls.Add(this.label8);
+            this.pnlProfitRevenue.Controls.Add(this.label7);
+            this.pnlProfitRevenue.Controls.Add(this.label6);
+            this.pnlProfitRevenue.Location = new System.Drawing.Point(168, 12);
+            this.pnlProfitRevenue.Name = "pnlProfitRevenue";
+            this.pnlProfitRevenue.Size = new System.Drawing.Size(546, 477);
+            this.pnlProfitRevenue.TabIndex = 12;
             // 
-            // lblAddedIngredients
+            // label6
             // 
-            this.lblAddedIngredients.AutoSize = true;
-            this.lblAddedIngredients.Location = new System.Drawing.Point(16, 310);
-            this.lblAddedIngredients.Name = "lblAddedIngredients";
-            this.lblAddedIngredients.Size = new System.Drawing.Size(135, 13);
-            this.lblAddedIngredients.TabIndex = 11;
-            this.lblAddedIngredients.Text = "Toegevoegde ingrediënten";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label6.Location = new System.Drawing.Point(32, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 31);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Winst en omzet";
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 234);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Ingrediënten";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.Location = new System.Drawing.Point(40, 117);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 20);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Winst:";
             // 
-            // label5
+            // label8
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 138);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Bodem";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.Location = new System.Drawing.Point(42, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Omzet:";
+            // 
+            // lblProfit
+            // 
+            this.lblProfit.AutoSize = true;
+            this.lblProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblProfit.Location = new System.Drawing.Point(109, 117);
+            this.lblProfit.Name = "lblProfit";
+            this.lblProfit.Size = new System.Drawing.Size(17, 20);
+            this.lblProfit.TabIndex = 13;
+            this.lblProfit.Text = "  ";
+            // 
+            // lblRevenue
+            // 
+            this.lblRevenue.AutoSize = true;
+            this.lblRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblRevenue.Location = new System.Drawing.Point(109, 141);
+            this.lblRevenue.Name = "lblRevenue";
+            this.lblRevenue.Size = new System.Drawing.Size(21, 20);
+            this.lblRevenue.TabIndex = 14;
+            this.lblRevenue.Text = "   ";
             // 
             // PizzaForm
             // 
@@ -522,6 +617,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 501);
             this.Controls.Add(this.pnlAddPizza);
+            this.Controls.Add(this.pnlProfitRevenue);
+            this.Controls.Add(this.btnRevenueProfit);
             this.Controls.Add(this.pnlNewOrder);
             this.Controls.Add(this.pnlAddCustomer);
             this.Controls.Add(this.lblMenuOrder);
@@ -545,6 +642,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudBOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAOrder)).EndInit();
             this.gbStandardPizza.ResumeLayout(false);
+            this.pnlProfitRevenue.ResumeLayout(false);
+            this.pnlProfitRevenue.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,6 +693,13 @@
         private System.Windows.Forms.ComboBox cbCrusts;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnRevenueProfit;
+        private System.Windows.Forms.Panel pnlProfitRevenue;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblRevenue;
+        private System.Windows.Forms.Label lblProfit;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
 

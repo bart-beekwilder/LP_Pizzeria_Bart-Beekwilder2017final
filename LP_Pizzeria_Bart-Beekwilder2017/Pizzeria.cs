@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
                 CurrentOrder = order;
             }
         }
-        public void ExportOrder()
+        public void ExportOrder(string path)
         {
             if(CurrentOrder != null)
             {
@@ -44,6 +45,34 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
                 Revenue += CurrentOrder.FinalSellPrice;
                 Profit += CurrentOrder.FinalSellPrice - CurrentOrder.FinalCostPrice;
                 double BTW = CurrentOrder.FinalSellPrice - CurrentOrder.CostWOTaxes;
+
+                FileStream file;
+                StreamWriter writer;
+                try
+                {
+                    file = new FileStream(path, FileMode.Create,
+                                                      FileAccess.Write);
+                    writer = new StreamWriter(file);
+                    writer.WriteLine("Pizzeria La Crosta Insapore");
+                    foreach (Pizza pizza in CurrentOrder.Pizzas)
+                    {
+                        writer.WriteLine(pizza.ToString() +":\t €"+ Convert.ToString(pizza.GetSellPrice()));
+                    }
+                    foreach (Byproduct byproduct in CurrentOrder.Byproducts)
+                    {
+                        writer.WriteLine(byproduct.ToString() + "\t €" + Convert.ToString(byproduct.SellPrice));
+                    }
+                    writer.WriteLine("");
+                    writer.WriteLine("Prijs exclusief BTW: \t €" + Convert.ToString(BTW));
+                    writer.WriteLine("BTW bedrag: \t €" + Convert.ToString(CurrentOrder.FinalSellPrice - BTW));
+                    writer.WriteLine("Te betalen bedrag: \t €" + Convert.ToString(CurrentOrder.FinalSellPrice));
+                    writer.Close();
+                    file.Close();
+                }
+                catch (IOException ex)
+                {
+                    throw ex;
+                }
 
                 PreparingOrders.Add(CurrentOrder);
                 CurrentOrder = null;

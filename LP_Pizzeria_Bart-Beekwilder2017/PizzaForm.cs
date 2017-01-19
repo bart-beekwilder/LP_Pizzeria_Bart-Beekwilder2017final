@@ -48,6 +48,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
             pnlAddCustomer.Hide();
             pnlAddPizza.Hide();
             pnlNewOrder.Hide();
+            pnlProfitRevenue.Hide();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
@@ -173,9 +174,29 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
 
         private void btnExportOrder_Click(object sender, EventArgs e)
         {
-            pizzeria.ExportOrder();
+            try
+            {
+                SaveFileDialog dialog = new SaveFileDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    string path = dialog.FileName;
+                    pizzeria.ExportOrder(path);
+                }
+            }
+            catch (Exception eh)
+            {
+                MessageBox.Show(eh.Message);
+            }
             HideAllPannels();
             UpdateButtons();
+        }
+
+        private void btnRevenueProfit_Click(object sender, EventArgs e)
+        {
+            HideAllPannels();
+            pnlProfitRevenue.Show();
+            lblProfit.Text = "€" + pizzeria.Profit.ToString("0.00");
+            lblRevenue.Text = "€" + pizzeria.Revenue.ToString("0.00");
         }
     }
 }
