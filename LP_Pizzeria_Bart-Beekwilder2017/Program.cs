@@ -16,7 +16,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new PizzaForm());
         }
     }
 }
