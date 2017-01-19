@@ -37,7 +37,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
         {
             Name = name;
             IsStandard = isStandard;
-            double x = (a + b + c)/2;
+            double x = (a + b + c)/2.00;
             SurfaceArea = Math.Sqrt(x * (x - a) * (x - b) * (x - c));
             Shape = Shape.Triangle;
             Ingredients = ingredients;
