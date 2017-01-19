@@ -61,6 +61,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
         }
         public double GetSellPrice()
         {
+            //Om de verkoopprijs te berekenen
             double sellPrice = SurfaceArea * Crust.SellPrice;
             foreach (Ingredient ingredient in Ingredients)
             {
