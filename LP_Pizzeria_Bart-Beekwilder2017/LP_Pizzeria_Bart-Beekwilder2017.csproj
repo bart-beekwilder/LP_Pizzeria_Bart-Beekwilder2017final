@@ -49,6 +49,13 @@
     <Compile Include="Byproduct.cs" />
     <Compile Include="Crust.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="DAL\Contexts\MSSQL\CrustMSSQLContext.cs" />
+    <Compile Include="DAL\Contexts\MSSQL\IngredientMSSQLContext.cs" />
+    <Compile Include="DAL\Contexts\MSSQL\MSSQLConnection.cs" />
+    <Compile Include="DAL\Interfaces\ICrust.cs" />
+    <Compile Include="DAL\Interfaces\IIngredient.cs" />
+    <Compile Include="DAL\Repositories\CrustRepo.cs" />
+    <Compile Include="DAL\Repositories\IngredientRepo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +92,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\Contexts\" />
-    <Folder Include="DAL\Interfaces\" />
-    <Folder Include="DAL\Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
