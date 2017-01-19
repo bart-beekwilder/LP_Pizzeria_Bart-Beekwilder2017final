@@ -41,8 +41,8 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
             if(CurrentOrder != null)
             {
                 CurrentOrder.CompleteOrder();
-                Revenue = CurrentOrder.FinalSellPrice;
-                Profit = CurrentOrder.FinalSellPrice - CurrentOrder.FinalCostPrice;
+                Revenue += CurrentOrder.FinalSellPrice;
+                Profit += CurrentOrder.FinalSellPrice - CurrentOrder.FinalCostPrice;
                 double BTW = CurrentOrder.FinalSellPrice - CurrentOrder.CostWOTaxes;
 
 

@@ -115,6 +115,24 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Contexts.MSSQL
                 cmd.Parameters.AddWithValue("@SurfaceArea", Convert.ToString(pizza.SurfaceArea));
                 cmd.Parameters.AddWithValue("@CrustID", Convert.ToString(pizza.Crust.ID));
                 cmd.ExecuteNonQuery();
+
+                query = "select IDENT_CURRENT('PZA_Pizza') AS ID";
+                cmd = new SqlCommand(query, connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                int pizzaID = Convert.ToInt32(reader["ID"]);
+                reader.Close();
+
+                foreach (Ingredient ingredient in pizza.Ingredients)
+                {
+                    query = "INSERT INTO PZA_OrderByproduct (PizzaID, IngredientID) "
+                                   + "VALUES (@PizzaID, @IngredientID)";
+                    cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@PizzaID", Convert.ToString(pizzaID));
+                    cmd.Parameters.AddWithValue("@IngredientID", Convert.ToString(ingredient.ID));
+                    cmd.ExecuteNonQuery();
+                }
+
                 connection.Close();
             }
         }
