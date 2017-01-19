@@ -95,5 +95,9 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
             }
             return sellPrice;
         }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

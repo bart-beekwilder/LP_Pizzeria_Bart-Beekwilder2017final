@@ -21,5 +21,9 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
             SellPrice = sellPrice;
             TaxPercentage = taxPercentage;
         }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

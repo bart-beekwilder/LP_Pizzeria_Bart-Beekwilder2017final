@@ -11,7 +11,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Repositories
     {
         private IByproduct context;
 
-        public public ByproductRepo(IByproduct context)
+        public ByproductRepo(IByproduct context)
         {
             this.context = context;
         }

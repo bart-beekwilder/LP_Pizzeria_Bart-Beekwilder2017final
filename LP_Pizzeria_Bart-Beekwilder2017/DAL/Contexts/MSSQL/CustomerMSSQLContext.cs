@@ -43,7 +43,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Contexts.MSSQL
             using (SqlConnection connection = new SqlConnection(ConnectionStr))
             {
                 connection.Open();
-                string query = "INSERT INTO PZA_Customer (Name, Recidence, Street, Housenumber) "
+                string query = "INSERT INTO PZA_Customer (Name, Residence, Street, Housenumber) "
                                + "VALUES (@Name, @Residence, @Street, @Housenumber)";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@Name", customer.Name);
