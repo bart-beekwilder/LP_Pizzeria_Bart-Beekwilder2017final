@@ -41,8 +41,8 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Contexts.MSSQL
                 {
                     Crust crust = new Crust(Convert.ToInt32(reader["ID"])
                              , Convert.ToString(reader["Name"])
-                             , Convert.ToInt32(reader["CostPrice"])
-                             , Convert.ToInt32(reader["SellPrice"]));
+                             , Convert.ToDouble(reader["CostPrice"])
+                             , Convert.ToDouble(reader["SellPrice"]));
                     crusts.Add(crust);
                 }
                 connection.Close();

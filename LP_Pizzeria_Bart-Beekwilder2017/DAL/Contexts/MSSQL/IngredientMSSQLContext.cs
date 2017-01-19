@@ -41,8 +41,8 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Contexts.MSSQL
                 {
                     Ingredient ingredient = new Ingredient(Convert.ToInt32(reader["ID"])
                              , Convert.ToString(reader["Name"])
-                             , Convert.ToInt32(reader["CostPrice"])
-                             , Convert.ToInt32(reader["SellPrice"])
+                             , Convert.ToDouble(reader["CostPrice"])
+                             , Convert.ToDouble(reader["SellPrice"])
                              , Convert.ToBoolean(reader["IsVegetarian"])
                              , Convert.ToBoolean(reader["IsHalal"]));
                     ingredients.Add(ingredient);
@@ -66,8 +66,8 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Contexts.MSSQL
                 {
                     Ingredient ingredient = new Ingredient(Convert.ToInt32(reader["ID"])
                              , Convert.ToString(reader["Name"])
-                             , Convert.ToInt32(reader["CostPrice"])
-                             , Convert.ToInt32(reader["SellPrice"])
+                             , Convert.ToDouble(reader["CostPrice"])
+                             , Convert.ToDouble(reader["SellPrice"])
                              , Convert.ToBoolean(reader["IsVegetarian"])
                              , Convert.ToBoolean(reader["IsHalal"]));
                     ingredients.Add(ingredient);
