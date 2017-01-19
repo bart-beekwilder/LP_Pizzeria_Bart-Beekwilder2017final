@@ -31,9 +31,7 @@
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnMenuNewOrder = new System.Windows.Forms.Button();
             this.btnMenuAddPizza = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnExportOrder = new System.Windows.Forms.Button();
             this.lblMenuOrder = new System.Windows.Forms.Label();
             this.pnlAddCustomer = new System.Windows.Forms.Panel();
             this.lblCustomerTitle = new System.Windows.Forms.Label();
@@ -113,32 +111,15 @@
             this.btnMenuAddPizza.UseVisualStyleBackColor = true;
             this.btnMenuAddPizza.Click += new System.EventHandler(this.btnMenuAddPizza_Click);
             // 
-            // button4
+            // btnExportOrder
             // 
-            this.button4.Location = new System.Drawing.Point(12, 220);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 42);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(12, 268);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(129, 42);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(12, 316);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(129, 42);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnExportOrder.Location = new System.Drawing.Point(12, 220);
+            this.btnExportOrder.Name = "btnExportOrder";
+            this.btnExportOrder.Size = new System.Drawing.Size(129, 42);
+            this.btnExportOrder.TabIndex = 3;
+            this.btnExportOrder.Text = "Exporteer bestelling";
+            this.btnExportOrder.UseVisualStyleBackColor = true;
+            this.btnExportOrder.Click += new System.EventHandler(this.btnExportOrder_Click);
             // 
             // lblMenuOrder
             // 
@@ -544,9 +525,7 @@
             this.Controls.Add(this.pnlNewOrder);
             this.Controls.Add(this.pnlAddCustomer);
             this.Controls.Add(this.lblMenuOrder);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnExportOrder);
             this.Controls.Add(this.btnMenuAddPizza);
             this.Controls.Add(this.btnMenuNewOrder);
             this.Controls.Add(this.btnAddCustomer);
@@ -576,9 +555,7 @@
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnMenuNewOrder;
         private System.Windows.Forms.Button btnMenuAddPizza;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnExportOrder;
         private System.Windows.Forms.Label lblMenuOrder;
         private System.Windows.Forms.Panel pnlAddCustomer;
         private System.Windows.Forms.Label lblCustomerTitle;

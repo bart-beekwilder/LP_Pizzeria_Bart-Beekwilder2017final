@@ -57,9 +57,9 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
                 FinalSellPrice += byproduct.SellPrice;
                 CostWOTaxes += byproduct.SellPrice / (100 + byproduct.TaxPercentage) * 100;
             }
-            CostWOTaxes = CostWOTaxes * 100;
-            FinalSellPrice = FinalSellPrice * 100;
-            FinalCostPrice = FinalCostPrice * 100;
+            CostWOTaxes = CostWOTaxes / 100;
+            FinalSellPrice = FinalSellPrice / 100;
+            FinalCostPrice = FinalCostPrice / 100;
         }
     }
 }

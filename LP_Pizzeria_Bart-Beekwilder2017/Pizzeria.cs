@@ -10,7 +10,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
     {
         public double Profit { get; private set; }
         public double Revenue { get; private set; }
-        public List<Order> PreparingOrders { get; private set; }
+        public List<Order> PreparingOrders { get; private set; } = new List<Order>();
         public Order CurrentOrder { get; private set; }
         
         public void NewStandardPizza(Pizza pizza)
@@ -45,7 +45,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
                 Profit += CurrentOrder.FinalSellPrice - CurrentOrder.FinalCostPrice;
                 double BTW = CurrentOrder.FinalSellPrice - CurrentOrder.CostWOTaxes;
 
-
+                PreparingOrders.Add(CurrentOrder);
                 CurrentOrder = null;
             }
         }

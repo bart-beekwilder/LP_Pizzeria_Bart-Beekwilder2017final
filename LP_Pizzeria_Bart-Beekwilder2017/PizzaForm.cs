@@ -32,6 +32,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
                 btnMenuNewOrder.Enabled = true;
 
                 btnMenuAddPizza.Enabled = false;
+                btnExportOrder.Enabled = false;
             }
             else
             {
@@ -39,6 +40,7 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
                 btnMenuNewOrder.Enabled = false;
 
                 btnMenuAddPizza.Enabled = true;
+                btnExportOrder.Enabled = true;
             }
         }
         private void HideAllPannels()
@@ -167,6 +169,13 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
                     lbPizzaIngredients.Items.Add(ingredient);
                 }
             }
+        }
+
+        private void btnExportOrder_Click(object sender, EventArgs e)
+        {
+            pizzeria.ExportOrder();
+            HideAllPannels();
+            UpdateButtons();
         }
     }
 }
