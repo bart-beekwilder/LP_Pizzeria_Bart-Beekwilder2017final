@@ -14,19 +14,19 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Repositories
         {
             this.context = context;
         }
-        void Insert(Ingredient ingredient)
+        public void Insert(Ingredient ingredient)
         {
             context.Insert(ingredient);
         }
-        void Delete(Ingredient ingredient)
+        public void Delete(Ingredient ingredient)
         {
             context.Delete(ingredient);
         }
-        List<Ingredient> GetAll()
+        public List<Ingredient> GetAll()
         {
             return context.GetAll();
         }
-        List<Ingredient> GetAllForPizza(int ID)
+        public List<Ingredient> GetAllForPizza(int ID)
         {
             return context.GetAllForPizza(ID);
         }

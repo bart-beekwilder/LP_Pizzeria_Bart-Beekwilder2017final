@@ -11,19 +11,19 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Repositories
     {
         private IByproduct context;
 
-        public ByproductRepo(IByproduct context)
+        public public ByproductRepo(IByproduct context)
         {
             this.context = context;
         }
-        void Delete(Byproduct byproduct)
+        public void Delete(Byproduct byproduct)
         {
             context.Delete(byproduct);
         }
-        List<Byproduct> GetAll()
+        public List<Byproduct> GetAll()
         {
             return context.GetAll();
         }
-        void Insert(Byproduct byproduct)
+        public void Insert(Byproduct byproduct)
         {
             context.Insert(byproduct);
         }

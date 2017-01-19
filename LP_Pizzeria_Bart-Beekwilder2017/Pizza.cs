@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LP_Pizzeria_Bart_Beekwilder2017.DAL.Contexts.MSSQL;
+using LP_Pizzeria_Bart_Beekwilder2017.DAL.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,12 +45,29 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
             Ingredients = ingredients;
             Crust = crust;
         }
-        public Pizza(int ID, string name, int surfaceArea, Shape shape, List<int> ingredientIDs, int crustID)
+        public Pizza(int ID, string name, int surfaceArea, int shapeID, bool isStandard, int crustID)
         {
             this.ID = ID;
             Name = name;
             SurfaceArea = surfaceArea;
-            Shape = shape;
+            IsStandard = isStandard;
+            Shape = (Shape)(shapeID - 1);
+            CrustRepo cRepo = new CrustRepo(new CrustMSSQLContext());
+            Crust = cRepo.GetByID(crustID);
+            IngredientRepo iRepo = new IngredientRepo(new IngredientMSSQLContext());
+            Ingredients = iRepo.GetAllForPizza(this.ID);
+            //if(shapeID == 1)
+            //{
+            //    Shape = Shape.Circle;
+            //}
+            //else if(shapeID == 2)
+            //{
+            //    Shape = Shape.Rectangle;
+            //}
+            //else if(shapeID == 3)
+            //{
+            //    Shape = Shape.Triangle;
+            //}
         }
         public double GetCostPrice()
         {

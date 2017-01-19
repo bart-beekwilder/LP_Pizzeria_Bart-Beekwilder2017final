@@ -26,6 +26,10 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Repositories
         {
             context.Delete(crust);
         }
+        public Crust GetByID(int ID)
+        {
+            return context.GetByID(ID);
+        }
 
         public List<Crust> GetAll()
         {

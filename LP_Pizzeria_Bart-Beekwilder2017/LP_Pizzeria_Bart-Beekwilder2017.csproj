@@ -54,6 +54,7 @@
     <Compile Include="DAL\Contexts\MSSQL\CustomerMSSQLContext.cs" />
     <Compile Include="DAL\Contexts\MSSQL\IngredientMSSQLContext.cs" />
     <Compile Include="DAL\Contexts\MSSQL\MSSQLConnection.cs" />
+    <Compile Include="DAL\Contexts\MSSQL\PizzaMSSQLContext.cs" />
     <Compile Include="DAL\Interfaces\IByproduct.cs" />
     <Compile Include="DAL\Interfaces\ICrust.cs" />
     <Compile Include="DAL\Interfaces\ICustomer.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="DAL\Repositories\CrustRepo.cs" />
     <Compile Include="DAL\Repositories\CustomerRepo.cs" />
     <Compile Include="DAL\Repositories\IngredientRepo.cs" />
+    <Compile Include="DAL\Repositories\PizzaRepo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

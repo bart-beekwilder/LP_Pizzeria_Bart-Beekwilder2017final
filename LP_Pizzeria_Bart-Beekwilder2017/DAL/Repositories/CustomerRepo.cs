@@ -14,11 +14,11 @@ namespace LP_Pizzeria_Bart_Beekwilder2017.DAL.Repositories
         {
             this.context = context;
         }
-        Customer GetByID(int ID)
+        public Customer GetByID(int ID)
         {
             return context.GetByID(ID);
         }
-        void Insert(Customer customer)
+        public void Insert(Customer customer)
         {
             context.Insert(customer);
         }
