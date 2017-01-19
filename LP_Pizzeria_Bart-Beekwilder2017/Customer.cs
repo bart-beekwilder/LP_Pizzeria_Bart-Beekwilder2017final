@@ -13,11 +13,12 @@ namespace LP_Pizzeria_Bart_Beekwilder2017
         public string Residence { get; private set; }
         public string Street { get; private set; }
         public int Housenumber { get; private set; }
-        public Customer(int ID, string name, string residence, int housenumber)
+        public Customer(int ID, string name, string residence, string street, int housenumber)
         {
             this.ID = ID;
             Name = name;
             Residence = residence;
+            Street = street;
             Housenumber = housenumber;
         }
     }

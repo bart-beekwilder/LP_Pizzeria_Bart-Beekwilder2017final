@@ -50,11 +50,14 @@
     <Compile Include="Crust.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DAL\Contexts\MSSQL\CrustMSSQLContext.cs" />
+    <Compile Include="DAL\Contexts\MSSQL\CustomerMSSQLContext.cs" />
     <Compile Include="DAL\Contexts\MSSQL\IngredientMSSQLContext.cs" />
     <Compile Include="DAL\Contexts\MSSQL\MSSQLConnection.cs" />
     <Compile Include="DAL\Interfaces\ICrust.cs" />
+    <Compile Include="DAL\Interfaces\ICustomer.cs" />
     <Compile Include="DAL\Interfaces\IIngredient.cs" />
     <Compile Include="DAL\Repositories\CrustRepo.cs" />
+    <Compile Include="DAL\Repositories\CustomerRepo.cs" />
     <Compile Include="DAL\Repositories\IngredientRepo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
